@@ -29,4 +29,14 @@
  <servlet-name>second</servlet-name>
  <url-pattern>/second</url-pattern>
  </servlet-mapping>
+ <!--  servlet declaration -->
+ <servlet>
+ <servlet-name>doget</servlet-name>
+ <servlet-class>com.servlet.MyServlet</servlet-class>
+ </servlet>
+ <!-- servlet mapping -->
+ <servlet-mapping>
+ <servlet-name>doget</servlet-name>
+ <url-pattern>/doget</url-pattern>
+ </servlet-mapping>
 </web-app>
