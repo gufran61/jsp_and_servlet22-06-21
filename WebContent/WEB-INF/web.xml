@@ -39,4 +39,14 @@
  <servlet-name>doget</servlet-name>
  <url-pattern>/doget</url-pattern>
  </servlet-mapping>
+ <!--  servlet declaration -->
+ <servlet>
+ <servlet-name>register</servlet-name>
+ <servlet-class>com.servlet.Register</servlet-class>
+ </servlet>
+ <!-- servlet mapping -->
+ <servlet-mapping>
+ <servlet-name>register</servlet-name>
+ <url-pattern>/Registerservlet</url-pattern>
+ </servlet-mapping>
 </web-app>
