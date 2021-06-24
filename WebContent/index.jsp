@@ -8,5 +8,7 @@
 </head>
 <body>
 <h1>aswkm</h1>
+<h1> <a href="web">firstServlet</a></h1>
+<h1> <a href="second">secondServlet</a></h1>
 </body>
 </html>
