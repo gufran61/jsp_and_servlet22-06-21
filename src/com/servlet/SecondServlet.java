@@ -15,7 +15,12 @@ public class SecondServlet extends GenericServlet {
 		System.out.println("in generic servlet");
 		res.setContentType("text/html");
 		PrintWriter out = res.getWriter();
-		out.println("<h1>this is our generic servlet</h1>");
+		int second1 = Integer.parseInt(req.getParameter("n1"));
+		int second2 = Integer.parseInt(req.getParameter("n2"));
+		int mul=second1*second2;
+		int s1 = (int) req.getAttribute("k");
+		out.println("<h1>this is our  servlet1 >>>>>"+s1+"</h1>");
+		out.println("<h1>this is our  servlet2 >>>>>"+mul+"</h1>");
 	}
 
 }

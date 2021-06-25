@@ -27,7 +27,7 @@
  <!-- servlet mapping -->
  <servlet-mapping>
  <servlet-name>second</servlet-name>
- <url-pattern>/second</url-pattern>
+ <url-pattern>/s2</url-pattern>
  </servlet-mapping>
  <!--  servlet declaration -->
  <servlet>
@@ -48,5 +48,15 @@
  <servlet-mapping>
  <servlet-name>register</servlet-name>
  <url-pattern>/Registerservlet</url-pattern>
+ </servlet-mapping>
+ <!--  servlet declaration -->
+ <servlet>
+ <servlet-name>servlet1</servlet-name>
+ <servlet-class>com.servlet.Servlet1</servlet-class>
+ </servlet>
+ <!-- servlet mapping -->
+ <servlet-mapping>
+ <servlet-name>servlet1</servlet-name>
+ <url-pattern>/s1</url-pattern>
  </servlet-mapping>
 </web-app>

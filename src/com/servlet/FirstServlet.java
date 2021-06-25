@@ -46,5 +46,5 @@ PrintWriter writer = res.getWriter();
 writer.println("<h1>this is my out put from servlet </h1>");
 writer.println("<h1>today data and time is "+new Date().toString() +"</h1>");
 	}
-
+  
 }
