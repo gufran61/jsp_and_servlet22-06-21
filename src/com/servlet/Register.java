@@ -3,6 +3,7 @@ package com.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -27,9 +28,16 @@ public class Register extends HttpServlet {
 			out.println("<h2>email : " + email +"</h2>");
 			out.println("<h2>gender : " + gender +"</h2>");
 			out.println("<h2>condition : " + condition +"</h2>");
+			RequestDispatcher rd = req.getRequestDispatcher("success");
+			rd.forward(req, resp);
 		}else {
 			out.println("you have not accepted terms and condition");
-		}}else {out.println("you have not accepted terms and condition");}
+		}}else {out.println("you have not accepted terms and condition");
+		// i want to include output of index.jsp
+		//get the object of RequestDispatcher
+		RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
+		rd.include(req, resp);
+		}
 	}
 
 }
