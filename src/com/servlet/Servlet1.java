@@ -29,15 +29,19 @@ public class Servlet1 extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String n1 = request.getParameter("n1");
-		String n2 = request.getParameter("n2");
-		int i = Integer.parseInt(n1);
-		int i1 = Integer.parseInt(n2);
-		int sum = i+i1;
-		request.setAttribute("k",sum);
-		RequestDispatcher rd = request.getRequestDispatcher("s2");
-		rd.forward(request, response);
-		
+	response.setContentType("text/html");
+	PrintWriter out = response.getWriter();
+	out.println("<!DOCTYPE html>");
+	out.println("<html>");
+	out.println("<head>");
+	out.println("<title> servlet1</title>");
+	out.println("</head>");
+	out.println("<body>");
+	String name = request.getParameter("name");
+	out.println("<h1>hii ,"+name+"welcome to my website</h1>");
+	out.println("<h1><a href='servlet2'>go to servlet2</h1>");
+	out.println("</body>");
+	out.println("</html>");
 	}
 
 	/**

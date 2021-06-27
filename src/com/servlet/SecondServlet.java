@@ -11,16 +11,20 @@ import javax.servlet.ServletResponse;
 public class SecondServlet extends GenericServlet {
 
 	@Override
-	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
-		System.out.println("in generic servlet");
-		res.setContentType("text/html");
-		PrintWriter out = res.getWriter();
-		int second1 = Integer.parseInt(req.getParameter("n1"));
-		int second2 = Integer.parseInt(req.getParameter("n2"));
-		int mul=second1*second2;
-		int s1 = (int) req.getAttribute("k");
-		out.println("<h1>this is our  servlet1 >>>>>"+s1+"</h1>");
-		out.println("<h1>this is our  servlet2 >>>>>"+mul+"</h1>");
+	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		out.println("<!DOCTYPE html>");
+		out.println("<html>");
+		out.println("<head>");
+		out.println("<title> servlet2</title>");
+		out.println("</head>");
+		out.println("<body>");
+		String name = request.getParameter("name");
+		out.println("<h1>hii ,"+name+"welcome to back my website</h1>");
+		out.println("<h1>thankyou</h1>");
+		out.println("</body>");
+		out.println("</html>");
 	}
 
 }
